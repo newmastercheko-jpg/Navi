@@ -4,14 +4,10 @@
 <meta charset="utf-8">
 <title>Redirect…</title>
 <script>
-  const yandexIntent = "intent://navigate?lat=40.135468&lon=67.825505#Intent;scheme=yandexnavi;package=ru.yandex.yandexnavi;end";
-  const yandexNavi = "yandexnavi://build_route_on_map?lat_to=40.135468&lon_to=67.825505";
-
-  if (navigator.userAgent.includes("Instagram")) {
-      window.location.href = yandexIntent;
-  } else {
-      window.location.href = yandexNavi;
+  function openNavi() {
+      window.location = "intent://navigate?lat=40.135468&lon=67.825505#Intent;scheme=yandexnavi;package=ru.yandex.yandexnavi;S.browser_fallback_url=https://newmastercheko-jpg.github.io/Navi/fallback.html;end";
   }
+  setTimeout(openNavi, 100);
 </script>
 </head>
 <body>
