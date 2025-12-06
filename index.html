@@ -4,14 +4,12 @@
 <meta charset="utf-8">
 <title>Redirect…</title>
 <script>
-  function openNavi() {
-      // Yandex Navigator marshrut qurish
-      window.location.href =
-        "yandexnavi://build_route_on_map?lat_to=40.135468&lon_to=67.825505";
-  }
+  // To‘g‘ri ishlaydigan Yandex marshrut linki
+  const routeUrl = "https://yandex.ru/navi/?whatshere%5Bpoint%5D=67.825505%2C40.135468&whatshere%5Bzoom%5D=18&ll=67.825505%2C40.135468&z=18&rtext=~40.135468%2C67.825505&rtt=auto";
 
-  // 0.3 sekunddan keyin avtomatik ishga tushadi
-  setTimeout(openNavi, 300);
+  setTimeout(() => {
+    window.location.href = routeUrl;
+  }, 200);
 </script>
 </head>
 <body>
